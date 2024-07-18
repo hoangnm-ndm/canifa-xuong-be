@@ -2,6 +2,7 @@ import Product from "../models/Product.js";
 
 export const createProduct = async (req, res, next) => {
 	try {
+		console.log("createProduct");
 		const data = await Product.create(req.body);
 		if (data) {
 			return res.status(201).json({
