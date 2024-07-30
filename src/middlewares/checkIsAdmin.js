@@ -5,7 +5,6 @@ export const checkIsAdmin = async (req, res, next) => {
 				message: "Unthorized",
 			});
 		}
-		console.log("admin");
 		next();
 	} catch (error) {
 		return res.status(401).json({
